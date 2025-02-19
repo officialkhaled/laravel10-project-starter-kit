@@ -24,11 +24,11 @@
                         {{ __('Users') }}
                     </x-nav-link>
 
-                    @can('View Customers')
-                        <x-nav-link :href="route('customers.index')" :active="request()->is('customers*')">
-                            {{ __('Customers') }}
-                        </x-nav-link>
-                    @endcan
+                    {{--                    @can('View Customers')--}}
+                    {{--                        <x-nav-link :href="route('customers.index')" :active="request()->is('customers*')">--}}
+                    {{--                            {{ __('Customers') }}--}}
+                    {{--                        </x-nav-link>--}}
+                    {{--                    @endcan--}}
                 </div>
             </div>
 

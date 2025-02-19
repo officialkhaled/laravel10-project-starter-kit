@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\Auth\LoginController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,6 +15,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+// OAuth Login
 Route::group(['prefix' => '/login', 'as' => 'login.'], function () {
     Route::get('google', [LoginController::class, 'redirectToGoogle'])->name('google');
     Route::get('google/callback', [LoginController::class, 'handleGoogleCallback']);
@@ -23,6 +24,7 @@ Route::group(['prefix' => '/login', 'as' => 'login.'], function () {
     Route::get('github/callback', [LoginController::class, 'handleGithubCallback']);
 });
 
+// Permissions
 Route::group(['middleware' => ['role:super-admin|admin']], function () {
     Route::resource('permissions', PermissionController::class);
     Route::get('permissions/{permissionId}/delete', [PermissionController::class, 'destroy']);
