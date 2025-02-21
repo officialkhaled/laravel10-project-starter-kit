@@ -5,7 +5,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-red-800"/>
+                        <x-application-logo class="block h-9 w-auto fill-current text-indigo-800"/>
                     </a>
                 </div>
 
@@ -14,21 +14,21 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('permissions.index')" :active="request()->is('permissions*')">
-                        {{ __('Permissions') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('roles.index')" :active="request()->is('roles*')">
-                        {{ __('Roles') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('users.index')" :active="request()->is('users*')">
-                        {{ __('Users') }}
-                    </x-nav-link>
-
-                    {{--                    @can('View Customers')--}}
-                    {{--                        <x-nav-link :href="route('customers.index')" :active="request()->is('customers*')">--}}
-                    {{--                            {{ __('Customers') }}--}}
-                    {{--                        </x-nav-link>--}}
-                    {{--                    @endcan--}}
+                    @can('view permission')
+                        <x-nav-link :href="route('permissions.index')" :active="request()->is('permissions*')">
+                            {{ __('Permissions') }}
+                        </x-nav-link>
+                    @endcan
+                    @can('view role')
+                        <x-nav-link :href="route('roles.index')" :active="request()->is('roles*')">
+                            {{ __('Roles') }}
+                        </x-nav-link>
+                    @endcan
+                    @can('view user')
+                        <x-nav-link :href="route('users.index')" :active="request()->is('users*')">
+                            {{ __('Users') }}
+                        </x-nav-link>
+                    @endcan
                 </div>
             </div>
 
@@ -36,10 +36,12 @@
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
-                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                        <button class="inline-flex items-center px-3 py-2 shadow-sm text-sm leading-4 font-medium rounded-md text-gray-500 bg-white border hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                             <div class="flex items-center gap-2">
-                                <img src="{{  Auth::user()->avatar ?? asset('assets/images/default-avatar.png') }}" alt="{{  Auth::user()->name }}"
-                                     class="w-8 h-8 object-cover rounded-full">
+                                <div class="relative">
+                                    <img class="w-8 h-8 rounded-full" src="{{  Auth::user()->avatar ?? asset('assets/images/default-avatar.png') }}" alt="{{  Auth::user()->name }}">
+                                    <span class="top-0 start-6 absolute w-3 h-3 bg-green-500 border-2 border-white dark:border-gray-800 rounded-full"></span>
+                                </div>
                                 {{ Auth::user()->name }}
                             </div>
 
@@ -60,7 +62,7 @@
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
-                            <x-dropdown-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
+                            <x-dropdown-link :href="route('logout')" class="text-red-700" onclick="event.preventDefault(); this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
                         </form>

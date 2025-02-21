@@ -35,7 +35,7 @@
                 {{ __("Don't have an account? Sign up") }}
             </a>
 
-            <x-primary-button class="ms-3">
+            <x-primary-button class="ms-3 bg-indigo-600 hover:bg-indigo-800">
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
@@ -43,17 +43,19 @@
 
     <div class="mt-3 mb-1 flex justify-evenly gap-1 flex-col">
         <a href="{{ route('login.google') }}" data-toggle="tooltip" data-placement="top" title="Google Sign In!"
-           class="py-2 card w-100 mx-auto shadow-md hover:shadow-lg rounded-3xl">
+           class="py-2 card w-full mx-auto shadow-md hover:shadow-lg rounded-3xl">
             <div class="flex justify-between mx-2 gap-2 items-center">
                 <img src="{{ asset('assets/logos/google.png') }}" class="w-8 rounded-full bg-white p-1" alt="google">
-                <p class="font-bold mr-2">Sign in with Google</p>
+                <p class="font-bold mr-2">Sign in using Google</p>
+                <div class="p-4"></div>
             </div>
         </a>
         <a href="{{ route('login.github') }}" data-toggle="tooltip" data-placement="top" title="GitHub Sign In!"
-           class="py-2 card w-100 mx-auto shadow-md hover:shadow-lg rounded-3xl">
+           class="py-2 card w-full mx-auto shadow-md hover:shadow-lg rounded-3xl">
             <div class="flex justify-between mx-2 gap-2 items-center">
                 <img src="{{ asset('assets/logos/github.png') }}" class="w-8 rounded-full bg-white p-1" alt="github">
-                <p class="font-bold mr-2">Sign in with GitHub</p>
+                <p class="font-bold mr-2">Sign in using GitHub</p>
+                <div class="p-4"></div>
             </div>
         </a>
     </div>
