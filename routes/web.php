@@ -12,7 +12,11 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $breadcrumbs = [
+        ['label' => 'Home'],
+    ];
+
+    return view('dashboard', compact('breadcrumbs'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // OAuth Login

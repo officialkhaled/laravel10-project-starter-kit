@@ -18,7 +18,16 @@ class PermissionController extends Controller
     public function index()
     {
         $permissions = Permission::query()->latest()->get();
-        return view('role-permission.permissions.index', ['permissions' => $permissions]);
+
+        $breadcrumbs = [
+            ['label' => 'Home', 'route' => 'dashboard'],
+            ['label' => 'Permissions'],
+        ];
+
+        return view('role-permission.permissions.index', [
+            'permissions' => $permissions,
+            'breadcrumbs' => $breadcrumbs,
+        ]);
     }
 
     public function create()
