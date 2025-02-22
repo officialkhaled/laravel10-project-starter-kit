@@ -1,15 +1,9 @@
 <p align="center">
-  <a href="https://laravel.com" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" width="90" alt="Laravel Logo">
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://tailwindcss.com" target="_blank">
+    &nbsp;&nbsp;&nbsp;&nbsp;
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" width="120" alt="Tailwind CSS Logo">
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://getbootstrap.com" target="_blank">
+    &nbsp;&nbsp;&nbsp;&nbsp;
     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" width="100" alt="Bootstrap Logo">
-  </a>
 </p>
 
 
