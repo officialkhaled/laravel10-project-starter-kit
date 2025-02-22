@@ -14,7 +14,7 @@ This repository provides a pre-configured Laravel 10 application with different 
 This project has three branches to choose from based on your styling preference and layout options:
 
 - **Multiple Styling Options:** Choose from three branches:
-  - **Master:** Plain Laravel setup with no styling.
+  - **Master:** Plain Laravel setup with basic styling included with Breeze.
   - **TailwindCSS:** Integrated with TailwindCSS and Flowbite.
   - **Bootstrap:** Uses Bootstrap for styling.
 
