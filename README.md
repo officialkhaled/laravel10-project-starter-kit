@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://laravel.com" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" width="120" alt="Laravel Logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" width="100" alt="Laravel Logo">
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://tailwindcss.com" target="_blank">
