@@ -36,7 +36,6 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
 
-
                     @if (session('status'))
                         @php
                             $status = session('status');
@@ -50,7 +49,7 @@
                         @endphp
 
                         <div class="p-4 mb-4 text-sm rounded-lg {{ $alertClass }}" role="alert">
-                            <span class="font-medium">{{ ucfirst($status) }}!</span> {{ session('message', 'Operation completed.') }}
+                            <span class="font-medium">{{ ucfirst($status) }}!</span> {{ session('message') }}
                         </div>
                     @endif
 
@@ -114,15 +113,15 @@
                                 </div>
                                 <div>
                                     @can('create permission')
-                                        <a href="{{ route('permissions.create') }}" class="bg-blue-600 hover:bg-blue-800 text-white py-1 px-3 rounded-md float-end shadow-sm">
-                                            <i class="fa-solid fa-plus opacity-75"></i>&nbsp;&nbsp;Add
+                                        <a href="{{ route('permissions.create') }}" class="bg-indigo-500 hover:bg-indigo-600 text-white py-1 px-3 rounded-md float-end shadow-sm">
+                                            <i class="fa-solid fa-plus opacity-75"></i>&nbsp;&nbsp;ADD
                                         </a>
                                     @endcan
                                 </div>
                             </div>
 
-                            <table id="search-table" class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                                <thead class="text-xs text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <table id="search-table" class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 border border-gray-200">
+                                <thead class="text-xs text-white uppercase bg-indigo-400 dark:bg-indigo-700">
                                 <tr>
                                     <th scope="col" class="p-4">
                                         <div class="flex items-center">
@@ -200,7 +199,6 @@
                         </div>
                     </div>
 
-
                 </div>
             </div>
         </div>
@@ -209,12 +207,5 @@
 </x-app-layout>
 
 @section('scripts')
-    <script>
-        if (document.getElementById("search-table") && typeof simpleDatatables.DataTable !== 'undefined') {
-            const dataTable = new simpleDatatables.DataTable("#search-table", {
-                searchable: true,
-                sortable: false
-            });
-        }
-    </script>
+
 @endsection
