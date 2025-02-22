@@ -27,11 +27,11 @@ You can clone the repository and switch to your desired branch:
 
 Clone the repository
 ```bash
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/officialkhaled/laravel10-project-starter-kit.git
 ```
 Navigate into the project directory
 ```bash
-cd your-repo
+cd laravel10-project-starter-kit
 ```
 Checkout your preferred branch
 ```bash
