@@ -4,11 +4,11 @@
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://tailwindcss.com" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" width="150" alt="Tailwind CSS Logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" width="60" alt="Tailwind CSS Logo">
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://getbootstrap.com" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" width="150" alt="Bootstrap Logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" width="60" alt="Bootstrap Logo">
   </a>
 </p>
 
