@@ -33,17 +33,17 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg dark:bg-gray-800">
                 <div class="p-6 text-gray-900">
 
                     @if (session('status'))
                         @php
                             $status = session('status');
                             $statusClasses = [
-                                'success' => 'text-green-800 bg-green-50 dark:bg-gray-800 dark:text-green-400',
-                                'error' => 'text-red-800 bg-red-50 dark:bg-gray-800 dark:text-red-400',
-                                'warning' => 'text-yellow-800 bg-yellow-50 dark:bg-gray-800 dark:text-yellow-400',
-                                'info' => 'text-blue-800 bg-blue-50 dark:bg-gray-800 dark:text-blue-400',
+                                'success' => 'text-green-800 bg-green-50 dark:bg-green-800 dark:text-green-400',
+                                'error' => 'text-red-800 bg-red-50 dark:bg-red-800 dark:text-red-400',
+                                'warning' => 'text-yellow-800 bg-yellow-50 dark:bg-yellow-800 dark:text-yellow-400',
+                                'info' => 'text-blue-800 bg-blue-50 dark:bg-blue-800 dark:text-blue-400',
                             ];
                             $alertClass = $statusClasses[$status] ?? 'text-gray-800 bg-gray-50 dark:bg-gray-800 dark:text-gray-400';
                         @endphp
@@ -56,13 +56,13 @@
                     <div class="relative overflow-x-auto">
                         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                             <div class="mb-4 flex justify-between items-center">
-                                <p class="font-bold text-xl">Edit Permission</p>
+                                <p class="font-bold text-xl dark:text-white">Edit Permission</p>
                                 <a href="{{ url('permissions') }}" class="bg-indigo-500 hover:bg-indigo-600 text-white py-1 px-3 rounded-md float-end shadow-sm">
                                     <i class="fa-solid fa-circle-chevron-left opacity-75"></i>&nbsp;&nbsp;BACK
                                 </a>
                             </div>
 
-                            <hr class="my-4">
+                            <hr class="my-4 dark:border-gray-600">
 
                             <form action="{{ route('permissions.update', $permission->id) }}" method="POST">
                                 @csrf

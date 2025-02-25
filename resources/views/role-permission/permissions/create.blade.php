@@ -33,7 +33,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg dark:bg-gray-800">
                 <div class="p-6 text-gray-900">
 
                     @if (session('status'))
@@ -56,13 +56,13 @@
                     <div class="relative overflow-x-auto">
                         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                             <div class="mb-4 flex justify-between items-center">
-                                <p class="font-bold text-xl">Add Permission</p>
+                                <p class="font-bold text-xl dark:text-white">Add Permission</p>
                                 <a href="{{ url('permissions') }}" class="bg-indigo-500 hover:bg-indigo-600 text-white py-1 px-3 rounded-md float-end shadow-sm">
                                     <i class="fa-solid fa-circle-chevron-left opacity-75"></i>&nbsp;&nbsp;BACK
                                 </a>
                             </div>
 
-                            <hr class="my-4">
+                            <hr class="my-4 dark:border-gray-600">
 
                             <form action="{{ route('permissions.store') }}" method="POST">
                                 @csrf

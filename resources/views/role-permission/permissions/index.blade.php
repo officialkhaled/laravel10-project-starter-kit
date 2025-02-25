@@ -33,17 +33,17 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg dark:bg-gray-800">
                 <div class="p-6 text-gray-900">
 
                     @if (session('status'))
                         @php
                             $status = session('status');
                             $statusClasses = [
-                                'success' => 'text-green-800 bg-green-50 dark:bg-gray-800 dark:text-green-400',
-                                'error' => 'text-red-800 bg-red-50 dark:bg-gray-800 dark:text-red-400',
-                                'warning' => 'text-yellow-800 bg-yellow-50 dark:bg-gray-800 dark:text-yellow-400',
-                                'info' => 'text-blue-800 bg-blue-50 dark:bg-gray-800 dark:text-blue-400',
+                                'success' => 'text-green-800 bg-green-50 dark:bg-green-800 dark:text-green-400',
+                                'error' => 'text-red-800 bg-red-50 dark:bg-red-800 dark:text-red-400',
+                                'warning' => 'text-yellow-800 bg-yellow-50 dark:bg-yellow-800 dark:text-yellow-400',
+                                'info' => 'text-blue-800 bg-blue-50 dark:bg-blue-800 dark:text-blue-400',
                             ];
                             $alertClass = $statusClasses[$status] ?? 'text-gray-800 bg-gray-50 dark:bg-gray-800 dark:text-gray-400';
                         @endphp
@@ -120,7 +120,7 @@
                                 </div>
                             </div>
 
-                            <table id="search-table" class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 border border-gray-200">
+                            <table id="search-table" class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-600">
                                 <thead class="text-xs text-white uppercase bg-indigo-400 dark:bg-indigo-700">
                                 <tr>
                                     <th scope="col" class="p-4">
